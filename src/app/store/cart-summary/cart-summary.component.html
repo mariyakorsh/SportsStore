@@ -1,0 +1,18 @@
+<div class="pull-xs-right">
+  <small>
+    Your cart:
+    <span *ngIf="cart.quantity > 0">
+      {{cart.quantity}} item(s)
+      {{cart.cartPrice | currency: "USD": true: "2.2-2"}}
+    </span>
+    <span *ngIf="cart.quantity == 0">
+      (empty)
+    </span>
+  </small>
+  <button class="btn btn-sm bg-inverse" [disabled] = "cart.quantity == 0" routerLink="/cart"  routerLinkActive="active">
+    <i class="material-icons" style="color: white">&#xE8CC;</i>
+  </button>
+
+
+
+</div>

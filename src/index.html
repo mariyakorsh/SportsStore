@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SportsStore</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+<body class="m-a-1">
+  <app>
+    <div class="load"></div>
+  </app>
+</body>
+<style>
+  @keyframes turning {
+    0%{
+      border-radius: 0 0 0 0;
+      transform: rotate(0deg);
+    }
+    25%{
+      border-radius: 50% 0 0 0;
+      transform: rotate(45deg);
+    }
+    50%{
+      border-radius: 50% 50% 0 0;
+      transform: rotate(90deg);
+    }
+    75%{
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(135deg);
+    }
+    100%{
+      border-radius: 50% 50% 50% 50%;
+      transform: rotate(180deg);
+    }
+  }
+
+  .load{
+    width: 120px;
+    height: 120px;
+    background: violet;
+    margin: 100px;
+    animation: turning 2s;
+  }
+</style>
+</html>
